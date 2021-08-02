@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonathan Vice</title>
+    <link rel="stylesheet" href="https://unpkg.com/@coreui/icons/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="content">
+        <div id="personal-section">
+            <div id="picture-section">
+                <img src="img/me.png" alt="An image of myself">
+            </div>
+
+            <div id="socials-section">
+                <a href="https://twitter.com/MrSquigy" target="_blank" rel="noopener noreferrer" class="img-link"><i class="cib-twitter"></i></a>&nbsp;&nbsp;
+                <a href="https://github.com/MrSquigy" target="_blank" rel="noopener noreferrer" class="img-link"><i class="cib-github"></i></a>&nbsp;&nbsp;
+                <a href="mailto:jajvice@gmail.com" target="_blank" rel="noopener noreferrer" class="img-link"><i class="cib-gmail"></i></a>
+            </div>
+
+            <div id="details-section">
+                <ul>
+                    <li><h3>Jonathan Vice</h3></li>
+                    <li>24 Years old</li>
+                    <li>South Africa</li>
+                    <li id="computing-tooltip"><a href="education.html" target="_blank">BSc Computing</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="projects-section">
+            <div>
+                <h2>toy machine</h2>
+                <a href="https://github.com/MrSquigy/toy-machine" target="_blank">Project link</a>
+                <p>This is a basic virtual machine I made while studying computer architecture for my degree. It is a toy project, hence the name.</p>
+                <p>It contains an incomplete (but fully working) instruction set that makes use of Python's first-class functions as the instruction lookup.</p>
+            </div>
+            
+            <div>
+                <h2>tasm</h2>
+                <a href="https://github.com/MrSquigy/tasm" target="_blank">Project link</a>
+                <p>This is an assembler for the toy machine above.</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+    <script>
+        tippy("#computing-tooltip", {
+            arrow: "false",
+            content: "Computing is a degree that comprises computer science and information systems. Click to read more",
+            placement: "bottom",
+        });
+    </script>
+</body>
+</html>
