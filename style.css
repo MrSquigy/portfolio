@@ -1,3 +1,20 @@
+/*  This is my portfolio site. This file contains all the styling for the site.
+
+    Copyright (C) 2021  Jonathan Vice
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published
+    by the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>. */
+
 * {
     font-family: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -17,16 +34,19 @@ ul {
     color: black;
 }
 
+.center {
+    margin: auto;
+    margin-top: 20px;
+    width: 75%;
+    min-width: 750px;
+    max-width: 1200px;
+}
+
 #content {
     padding: 10px;
     display: flex;
     height: 100%;
     font-weight: normal;
-
-    margin: auto;
-    width: 75%;
-    min-width: 750px;
-    max-width: 1200px;
 }
 
 #details-section {
@@ -51,19 +71,13 @@ ul {
     justify-content: center;
 }
 
-#subject-list {
-    display: flex;
-    flex-direction: column;
-    border: 0.5px solid black;
+#subject-list td {
+    width: 20%;
+    padding: 10px;
+    text-align: center;
 }
 
-#subject-list li {
-    border: 0.5px solid black;
-    padding: 5px;
-    /* background-color: blanchedalmond; */
-}
-
-#subject-list li:hover {
+#subject-list td:hover {
     cursor: pointer;
     background-color: #D8D8D8;
 }

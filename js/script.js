@@ -1,3 +1,22 @@
+/*  This is my portfolio site. This script stores subject data
+    and populates the education page.
+
+    Copyright (C) 2021  Jonathan Vice
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published
+    by the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>. */
+
+
 // List of subjects in format [name, distinction, description]
 const subjects = [["Advanced Systems Development", true, "To introduce students to advanced topics in the analysis of information systems. This includes topics related to the software process, software engineering practice and the application of web engineering."],
 ["Computer Networks 1", false, "To introduce the fundamental building blocks that form a modern network, such as protocols, topologies and hardware. This module provides an in-depth coverage of the most important concepts in contemporary networking, such as TCP/IP, Ethernet, wireless transmission, and security. Students will also acquire the skills to build a network from scratch and maintain, upgrade, and troubleshoot an existing network."],
@@ -30,16 +49,41 @@ const subjects = [["Advanced Systems Development", true, "To introduce students 
 
 // Add the subjects to the list
 const subjectContainer = document.getElementById("subject-list");
+let subjectInfoElement = document.getElementById("subject-info")
+let row = document.createElement("tr");
 
 subjects.forEach((subject, i) => {
-    let subjectElement = document.createElement("li");
-    subjectElement.appendChild(document.createTextNode(subject[0]));
-    subjectElement.addEventListener("click", () => {
-        displaySubjectInfo(i)
-    });
-    subjectContainer.appendChild(subjectElement);
+    let col = document.createElement("td");
+
+    if (subject[1] === true) {
+        let bold = document.createElement("b");
+        bold.appendChild(document.createTextNode(subject[0]));
+        col.appendChild(bold);
+    } else {
+        col.appendChild(document.createTextNode(subject[0]));
+    }
+
+    // Create a new row after every 5 subjects
+    if (i % 5 == 0) {
+        subjectContainer.appendChild(row);
+        row = document.createElement("tr");
+    }
+
+    col.addEventListener("click", () => { displaySubjectInfo(i) });
+
+    row.appendChild(col);
 });
 
+subjectContainer.appendChild(row);
+
 function displaySubjectInfo(idx) {
-    alert(subjects[idx][2]);
+    // Remove existing info
+    while (subjectInfoElement.firstChild) {
+        subjectInfoElement.removeChild(subjectInfoElement.firstChild);
+    }
+
+    let header = document.createElement("h2");
+    header.appendChild(document.createTextNode(subjects[idx][0]));
+    subjectInfoElement.appendChild(header);
+    subjectInfoElement.appendChild(document.createTextNode(subjects[idx][2]));
 }
