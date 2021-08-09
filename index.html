@@ -12,18 +12,18 @@
     <div id="content" class="center">
         <div id="personal-section">
             <div id="picture-section">
-                <img src="img/me.png" alt="An image of myself">
+                <img src="data/me.png" alt="An image of myself">
             </div>
 
             <div id="socials-section">
                 <a href="https://twitter.com/MrSquigy" target="_blank" rel="noopener noreferrer" class="img-link"><i class="cib-twitter"></i></a>&nbsp;&nbsp;
                 <a href="https://github.com/MrSquigy" target="_blank" rel="noopener noreferrer" class="img-link"><i class="cib-github"></i></a>&nbsp;&nbsp;
-                <a href="mailto:jajvice@gmail.com" target="_blank" rel="noopener noreferrer" class="img-link"><i class="cib-gmail"></i></a>
+                <a href="mailto:jajvice@gmail.com" rel="noopener noreferrer" class="img-link"><i class="cib-gmail"></i></a>
             </div>
 
             <div id="details-section">
                 <ul>
-                    <li><h3>Jonathan Vice</h3></li>
+                    <li id="cv-tooltip"><a href="data/cv.pdf" download><h3>Jonathan Vice</h3></a></li>
                     <li>24 Years old</li>
                     <li>South Africa</li>
                     <li id="computing-tooltip"><a href="education.html">BSc Computing</a></li>
@@ -32,6 +32,12 @@
         </div>
 
         <div id="projects-section">
+            <div>
+                <h2>Roomie</h2>
+                <a href="https://github.com/MrSquigy/roomie" target="_blank">Project link</a>
+                <p>Roomie is an event scheduler made in Python with Django. It lets you set up any rooms you intend to use for events (such as meetings or presentations), then lets you add events to those rooms.</p>
+            </div>
+
             <div>
                 <h2>toy machine</h2>
                 <a href="https://github.com/MrSquigy/toy-machine" target="_blank">Project link</a>
@@ -53,6 +59,10 @@
             arrow: "false",
             content: "Computing is a degree that comprises computer science and information systems. Click to read more",
             placement: "bottom",
+        });
+        tippy("#cv-tooltip", {
+            arrow: "false",
+            content: "Download my CV",
         });
     </script>
 </body>
