@@ -18,7 +18,8 @@
 
 
 // List of subjects in format [name, distinction, description]
-const subjects = [["Advanced Systems Development", true, "To introduce students to advanced topics in the analysis of information systems. This includes topics related to the software process, software engineering practice and the application of web engineering."],
+const subjects = [["Advanced Programming", true, "To increase the depth of student's insight into advanced programming principles and consolidate their competence therein."],
+["Advanced Systems Development", true, "To introduce students to advanced topics in the analysis of information systems. This includes topics related to the software process, software engineering practice and the application of web engineering."],
 ["Computer Networks 1", false, "To introduce the fundamental building blocks that form a modern network, such as protocols, topologies and hardware. This module provides an in-depth coverage of the most important concepts in contemporary networking, such as TCP/IP, Ethernet, wireless transmission, and security. Students will also acquire the skills to build a network from scratch and maintain, upgrade, and troubleshoot an existing network."],
 ["Computer Organisation", false, "To introduce students to the underlying structure of a modern digital computer including digital logic level, machine code level and the software system level. It involves programming in an assembly language."],
 ["Computer Systems: Fundamental Concepts", true, "To introduce students to the computer as a system. This covers hardware concepts such as internal representation of numbers and characters and basic computer architecture, and software concepts such as systems software and applications software. It also includes a brief introduction to databases, and to systems analysis and design."],
